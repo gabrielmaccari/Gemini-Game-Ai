@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Para a classe filha poder ficar desgrudada da classe pai */
+}
+body {
+    background-image: url(assets/bg.jpg);
+    background-repeat: no-repeat; /*Para não repetir*/
+    background-size: 100% auto; /*Largura e altura*/
+    background-position: top center; /*Vertical e horizontal*/
+    background-color: #121214; /*HEX: RR, GG, BB*/
+    color: white; }
+
+body * {
+    font-family: "Inter", sans-serif;
+    line-height: 160%;
+}
+header {
+    padding-top: 2rem;
+    text-align: center;
+}
+header img {
+    width: 15rem;
+}
+main {
+    margin: 2rem auto; /*2rem em cima e em baixo, auto nas laterais*/
+    max-width: 36em;
+    width: 90%; /*90% da tela*/
+}
+section {
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50%, #e2d45c 100%);
+    border-radius: 0.625rem;
+    padding-top: 4px;
+    opacity: 0;
+    transform: translateY(2rem);
+    animation-name: aparecer;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards; /*Para que depois que apareça mantenh as propriedades da animação(forwards)
+    backwards seria para manter as configurações antes da animação*/
+}
+
+section > div {
+    padding: 2rem;
+    padding-top: 1.5rem;
+    background-color: #2a2634;
+    border-radius: 0.5rem;
+}
+section h2 {
+    letter-spacing: -0.47px;
+}
+section p {
+    letter-spacing: -0.18px;
+    color: #a1a1aa
+}
+@keyframes aparecer {
+    100% {
+        opacity: 1; /*Ele aparece*/
+        transform: translateY(0); /*Volta para sua posição inicial*/
+    }    
+}
+form {
+    display: flex;
+    gap: 0.85em;
+    flex-wrap: wrap;
+    margin: 1.25rem 0;
+}
+input, select {
+    all: unset; /*retirar as configurações padrão do input e select*/
+    border: 2px solid #9147ff;
+    border-radius: 0.5rem;
+    padding: 0.675rem;
+    font-size: 0.875rem;
+    background-color: #00000066;
+}
+input {
+    flex: 1; /*usa todo o campo disponível na div do input*/
+
+}
+button {
+    width: 100%; /*Ocupa 100% o pai, no caso o formulário*/
+    border: 0;
+    background-image: linear-gradient(220deg, #9572fc 0%, #43e7ad 50%, #e2d45c 100%);
+    padding: 0.675rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s; /*complementa o hover, toda transição (all) deve durar 0.3s e voltar para a posição inicial*/
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; /*cursor de não permitido*/
+}
+.loading {
+    animation: pulse 1s infinite; /*Animação de pulsar*/
+}
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+#aiResponse {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    padding: 1.35rem;
+    border-left: 4px solid #43e7ad;
+}
+#aiResponse ul {
+    padding-left: 1.5rem;
+}
+.escondido {
+    display: none; /*Esconde o elemento*/
+}

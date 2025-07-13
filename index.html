@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RocketSeat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo esportes nlw">
+    </header>
+    <main>
+        <section>
+            <div>
+            <h2 class="title">Assistente de meta</h2>
+            <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+            <form id="form">
+                <input id='apiKey'type="password" placeholder="Informe a API KEY do Gemini" required>
+                <select id="gameSelect">
+                    <option value="">Selecione um jogo</option>
+                    <option value="valorant">Valorant</option>
+                    <option value="lol">League Of Legends</option>
+                    <option value="cs">CS 2</option>
+                </select>
+                <input id='questionInput'type="text" placeholder="Ex:Qual o melhor exec A mirage tr?" required>
+            <button id="askButton">Perguntar</button>
+            </form>
+            <div id="aiResponse" class="escondido">
+                <div class="response-content">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
