@@ -70,7 +70,7 @@ ROCKETSEAT/
 ## 📷 Preview
 
 <div align="center">
-  <img src="assets/image.jpg" alt="Preview" width="400"/>
+  <img src="assets/image.png" alt="Preview" width="400"/>
 </div>
 
 ---
